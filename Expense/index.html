@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="App">
+        <div class="App-container">
+            <header class="App-header">
+                <h1>Expense Tracker</h1>
+            </header>
+            <main class="App-main">
+                <div class="left-panel">
+                    <div class="income-section">
+                        <h2>Set Your Income</h2>
+                        <form id="income-form">
+                            <div class="form-control">
+                                <label for="income">Income Amount</label>
+                                <input type="number" id="income" placeholder="Enter your income">
+                            </div>
+                            <button type="submit">Set Income</button>
+                        </form>
+                    </div>
+                    <div class="add-transaction">
+                        <h2>Add New Transaction</h2>
+                        <form id="transaction-form">
+                            <div class="form-control">
+                                <label for="text">Description</label>
+                                <input type="text" id="text" placeholder="Enter description...">
+                            </div>
+                            <div class="form-control">
+                                <label for="amount">Amount (negative for expense)</label>
+                                <input type="number" id="amount" placeholder="Enter amount...">
+                            </div>
+                            <button type="submit">Add Transaction</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right-panel">
+                    <div class="balance-section">
+                        <h2>Your Balance</h2>
+                        <div class="balance-amount">₹0.00</div>
+                        <div class="income-expense">
+                            <div class="income">
+                                <h3>Income</h3>
+                                <p class="money plus">₹0.00</p>
+                            </div>
+                            <div class="expense">
+                                <h3>Expense</h3>
+                                <p class="money minus">₹0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transaction-list">
+                        <h2>Transaction History</h2>
+                        <ul id="transaction-list"></ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
